@@ -28,16 +28,15 @@ class Register extends Component{
     render(){
         const {type} = this.state;
         const {msg,redirectTo} = this.props.user;
-        console.log(msg, redirectTo);
         if(redirectTo){
-            return <Redirect to={redirectTo}/>
+            return <Redirect to={redirectTo} />
         }
         return (
          <div>
              <NavBar>大神直聘</NavBar>
              <Logo/>
              <WingBlank>
-                 <p className="error-msg">{msg}</p>
+                 {msg ? <p className="error-msg">{msg}</p> : null}
                  <List>
                      <InputItem placeholder="请输入用户名" onChange={val=>this.handleChange("username",val)}>用户名:</InputItem>
                      <WhiteSpace />

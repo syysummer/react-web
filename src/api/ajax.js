@@ -5,7 +5,7 @@ export default  function ajax(url,data = {} ,type = "GET") {
      Object.keys(data).forEach(key => {
          queryStr += key + "=" + data[key] + "&";
      });
-     if(!queryStr){
+     if(queryStr){
          queryStr = queryStr.substring(0,queryStr.length - 1);
          queryStr = "?" + queryStr
      }

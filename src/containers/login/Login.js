@@ -34,7 +34,7 @@ class Login extends Component{
                 <NavBar>大神直聘</NavBar>
                 <Logo/>
                 <WingBlank>
-                    <p className="error-msg">{msg}</p>
+                    {msg ? <p className="error-msg">{msg}</p> : null}
                     <List>
                         <InputItem placeholder="请输入用户名" onChange={val=>this.handleChange("username",val)}>用户名:</InputItem>
                         <WhiteSpace />
