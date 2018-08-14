@@ -122,7 +122,6 @@ export function getUserList(type){
 
 // 连接服务器, 得到代表连接的socket对象(只需连接一次)
 const socket = io('ws://localhost:4000');
-
 function initChat(dispatch,meId){
     if(!io.socket){
         io.socket = socket;

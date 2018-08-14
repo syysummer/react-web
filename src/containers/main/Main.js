@@ -70,7 +70,7 @@ class Main extends Component {
             return null;
         }
 
-        //用于确定当前世哪个路由,进行对应的显示
+        //用于确定当前是哪个路由,进行对应的显示
         let currentNav = this.navList.find((nav,index) => nav.path === path );
         if(path === "/"){
             return <Redirect to={getRedirectTo(user.type,user.header)}/>

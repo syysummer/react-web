@@ -26,7 +26,7 @@ class HeaderSelector extends Component{
     };
     render(){
         let icon = this.state.icon;
-        const header = icon ? <span>已选择头像<img src={icon}/></span> :"请选择您的头像";
+        const header = icon ? <span>已选择头像<img src={icon} alt={""}/></span> :"请选择您的头像";
         return (
             <List renderHeader={() => header} className="my-list">
                 <Grid data={this.headerList}
